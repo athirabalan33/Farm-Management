@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+        <title>farm management</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <section>
+            <header>
+                <a href="#" class="logo">farm management</a>
+                <div class="toggle" onclick="menuToggle();"></div>
+            </header>
+            
+
+            <div class="glass">
+                <div class="content">
+                    <h2>welcome to farm management </h2><br>
+                    <p class="para"><span>Efficiently manage your farm with our comprehensive platform. Track crops, tasks, and resources to maximize productivity and sustainability. Enhance your farming operations with planning, monitoring, and decision-making features. Improve crop yield with effective crop rotation and soil management techniques. Optimize resource usage, including water and fertilizers, to ensure sustainable farming practices. Stay organized and make informed decisions to boost your farm's success.</span></p>
+                </div>
+            </div>
+
+            <video src="farm2.mp4" autoplay muted loop></video>
+
+            <ul class="navigation"><br>
+                <li><a href="#dashboard" onclick="dash();">Dashboard</a></li>
+                <li><a href="#crop" onclick="crop();">Crop</a></li>
+                <li><a href="#task" onclick="task();">Task</a></li>
+                <li><a href="#resources" onclick="resources();">Resourses</a></li>
+            </ul>
+        </section>
+
+        <section class="one">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="box">
+                <div class="square" style="--i:0"></div>
+                <div class="square" style="--i:1"></div>
+                <div class="square" style="--i:2"></div>
+                <div class="square" style="--i:3"></div>
+                <div class="square" style="--i:4"></div>
+                <div class="square" style="--i:5"></div>
+                <div class="square" style="--i:6"></div>
+                <div class="square" style="--i:7"></div>
+                <div class="square" style="--i:8"></div>
+                <div class="square" style="--i:9"></div>
+                <div class="square" style="--i:10"></div>
+                <div class="con">
+                <div class="contact">
+                        <h2>CONTACT US <br></h2>
+                        <P><a href="#">farmmanagement@gmail.com </a><br>Contact Number : +123456789
+                        </P>
+                    </div>
+                </div>
+
+                <section id="dashboard" class="sec">
+                    <div class="box">
+                        <div class="container">
+                            <div  class="all">
+                                <h2 id="d">Dashboard</h2><br>
+                                <div id="overview">
+                                    <p>Total Crops : <span id="totalCrops">0</span></p>
+                                    <p>Total Tasks : <span id="totalTasks">0</span></p>       
+                                    <p>Total Resources : <span id="totalResources">0</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="crop" class="sec">
+                    <div class="box">
+                        <div class="container">
+                            <div class="all">
+                                <h2 class="c">Crops</h2>
+                                <form id="cropForm">
+                                    <div class="inputbox">
+                                        <label for="cropName"> Crop Name </label>
+                                        <input type="text" id="cropName" required placeholder="crop name"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="cropType">Crop Type </label>
+                                        <input type="text" id="cropType" required placeholder="crop type"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="cropQuantity">   Quantity </label>
+                                        <input type="number" id="cropQuantity" required placeholder="Quantity in kg"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="plantingDate">Planting Date</label>
+                                        <input type="date" id="plantingDate" required><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="harvestDate"> Harvest Date </label>
+                                        <input type="date" id="harvestDate"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <button type="submit">Add Crop</button>
+                                    </div>
+                                </form>
+                                <ul id="cropList"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                        
+                <section id="task" class="sec">
+                    <div class="box">
+                        <div class="container">
+                            <div class="all">
+                                <h2 class="t">Tasks</h2>
+                                <form id="taskForm">
+                                    <div class="inputbox">
+                                        <label for="taskDescription">Task Name </label>
+                                        <input type="text" id="taskDescription" required placeholder="Task Name"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="taskDate">Task Date </label>
+                                        <input type="date" id="taskDate" required><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="assignedTo">Assigned To</label>
+                                        <input type="text" id="assignedTo" placeholder="Name"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="taskPriority">Priority </label>
+                                        <input type="text" placeholder="High/Medium/Low" id="taskPriority"> <br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <button type="submit">Add Task</button>
+                                    </div>
+                                </form>
+                                <ul id="taskList"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section  id="resources" class="sec">
+                    <div class="box">
+                        <div class="container">
+                            <div class="all">
+                                <h2 class="r">Resources</h2>
+                                <form id="resourceForm">
+                                    <div class="inputbox">
+                                        <label for="resourceName">Resource Name</label>
+                                        <input type="text" id="resourceName" required placeholder="Resource Name"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="resourceQuantity">  Quantity </label>
+                                        <input type="number" id="resourceQuantity" required placeholder="Quantity"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <label for="resourceType">Resource Type </label>
+                                        <input type="text" placeholder="e.g: Fertilizer, Water" id="resourceType"><br>
+                                    </div>
+                                    <div class="inputbox">
+                                        <button type="submit">Add Resources</button>
+                                    </div>
+                                </form>
+                                <ul id="resourceList"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+                
+        </section>   
+            
+        
+
+        
+        
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script src="script.js"></script> 
+        
+        
+    </body>
+
+</html>
